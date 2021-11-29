@@ -1,0 +1,35 @@
+type Approval @entity {
+  id: ID!
+  owner: Bytes! # address
+  spender: Bytes! # address
+  value: BigInt! # uint256
+}
+
+type MinterAdded @entity {
+  id: ID!
+  account: Bytes! # address
+}
+
+type MinterRemoved @entity {
+  id: ID!
+  account: Bytes! # address
+}
+
+type NewOwnership @entity {
+  id: ID!
+  from: Bytes! # address
+  to: Bytes! # address
+}
+
+type NewPendingOwnership @entity {
+  id: ID!
+  from: Bytes! # address
+  to: Bytes! # address
+}
+
+type Transfer @entity {
+  id: ID!
+  from: Bytes! # address
+  to: Bytes! # address
+  value: BigInt! # uint256
+}
